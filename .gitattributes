@@ -1,0 +1,38 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Force UTF-8 encoding + CRLF for source/text files Unity & Visual Studio generate
+*.cs text eol=crlf working-tree-encoding=UTF-8
+*.md text eol=crlf working-tree-encoding=UTF-8
+*.json text eol=crlf working-tree-encoding=UTF-8
+*.txt text eol=crlf working-tree-encoding=UTF-8
+*.shader text eol=crlf working-tree-encoding=UTF-8
+*.hlsl text eol=crlf working-tree-encoding=UTF-8
+*.cginc text eol=crlf working-tree-encoding=UTF-8
+
+# Unity YAML assets: treat as text but avoid line-ending churn (Unity uses LF internally)
+*.unity text eol=lf
+*.asset text eol=lf
+*.prefab text eol=lf
+*.mat text eol=lf
+*.meta text eol=lf
+*.controller text eol=lf
+*.anim text eol=lf
+*.physicMaterial text eol=lf
+*.physicsMaterial2D text eol=lf
+
+# Binary assets — never diff/normalize
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.psd binary
+*.tga binary
+*.tif binary
+*.dds binary
+*.fbx binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.exr binary
+*.wlt binary
