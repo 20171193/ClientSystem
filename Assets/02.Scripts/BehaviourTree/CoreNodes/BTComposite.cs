@@ -6,4 +6,9 @@ public abstract class BTComposite : BTNode
     public int LastRunningIndex { get { return lastRunningIndex; } }
 
     protected List<BTNode> children = new List<BTNode>();
+
+    public void Add(BTNode node)
+    {
+        children.Add(node);
+    }
 }

@@ -1,4 +1,4 @@
-// Behaviour Tree 최상위 노드
+// base node
 public abstract class BTNode
 { 
     public enum Status { Failure = 0, Success, Running}
