@@ -1,6 +1,9 @@
 ## Claude Code ##
 CLAUDE.md
 
+## 개발/블로그용 비공개 기록 (git 추적 제외) ##
+/DevJournal/
+
 ## Unity ##
 [Ll]ibrary/
 [Tt]emp/
@@ -79,3 +82,7 @@ obj/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+## 개발/블로그용 비공개 기록 (git 추적 제외, 위 meta 예외 규칙보다 뒤에 와야 함) ##
+/Assets/02.Scripts/BehaviourTree/Milestone.md
+/Assets/02.Scripts/BehaviourTree/Milestone.md.meta
