@@ -1,30 +1,26 @@
 ﻿
+using UnityEngine.Video;
+
 namespace ClientSystem.BTCore
 {
     // Selector Node
     //  : Success/Running 발견 시 바로 반환
+    //  : 우선순위대로 실행 (OR)
     public class BTSelector : BTComposite
     {
         public override Status Tick()
         {
-            // 마지막 Running 노드부터 순회
-            for (int i = lastRunningIndex; i < children.Count; i++)
+            // 모든 노드 순회
+            // TODO : 이어보기
+            foreach (var c in children)
             {
-                var status = children[i].Tick();
+                var status = c.Tick();
 
                 if (status == Status.Running)
-                {
-                    lastRunningIndex = i;
                     return Status.Running;
-                }
-
                 if (status == Status.Success)
-                {
-                    lastRunningIndex = 0;
                     return Status.Success;
-                }
             }
-            lastRunningIndex = 0;
             return Status.Failure;
         }
     }
